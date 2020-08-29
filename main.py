@@ -260,7 +260,7 @@ def main():
                 if st.checkbox('Click to load predefined dataset'):
                     dataset_path = os.path.join(os.path.abspath(__file__+ "/../"), "dataset")
                     files_available = [f for f in glob.glob(os.path.join(dataset_path,"*.csv"))]
-                    files_name = [f.replace(dataset_path,"").replace("\\","") for f in glob.glob(os.path.join(dataset_path,"*.csv"))]
+                    files_name = [f.replace(dataset_path,"").replace("\\","").replace("/","") for f in glob.glob(os.path.join(dataset_path,"*.csv"))]
                     dataset_dropdown = st.selectbox("Please select the file to choose", (['None']+files_name))
                     if dataset_dropdown !='None':
                         df_dateset = pd.read_csv(os.path.join(dataset_path,dataset_dropdown))
