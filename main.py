@@ -333,7 +333,7 @@ def main():
     ############################################################################################
     if choice_1_outer == "About":
         st.sidebar.header("About App")
-        st.sidebar.info("Complete Data Science Cycle Application ")
+        st.sidebar.info("Complete Data Profiling Application ")
         st.title("")
         st.title("")
         st.sidebar.header("About Developer")
